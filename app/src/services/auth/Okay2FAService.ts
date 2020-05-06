@@ -1,7 +1,7 @@
 import {TwoFAService} from "./interface/TwoFAService";
 import {AUTH_TYPES, OKAY_GUI_HEADER, OKAY_GUI_TEXT} from "@shared/constants";
 import {API} from "@shared/API";
-import {prepareOkayRequestBody} from "@shared/functions";
+import {prepareOkayCheckSessionRequestBody, prepareOkayRequestBody} from "@shared/functions";
 
 const { PSS_BASE_URL } = process.env;
 const authParams = {
@@ -34,9 +34,9 @@ export class Okay2FAService implements TwoFAService {
             )
     }
 
-    getAuthSessionStatus(externalSessionId: string) {
+    getAuthSessionStatus(externalSessionId: number) {
         return API
-            .post(`${PSS_BASE_URL}/gateway/check`, prepareOkayRequestBody(externalSessionId),
+            .post(`${PSS_BASE_URL}/gateway/check`, prepareOkayCheckSessionRequestBody(externalSessionId),
             )
     }
 }

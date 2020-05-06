@@ -88,13 +88,13 @@ router.get('/status/:externalSessionId', (req, res) => {
     }
 
     okay2FAService
-        .getAuthSessionStatus(externalSessionId.toString())
+        .getAuthSessionStatus(Number(externalSessionId))
         .then((response) => {
             res.json(response.data);
         })
         .catch((error) => {
             res.status(INTERNAL_SERVER_ERROR).json({
-                msg: 'Authorization was not unsuccessful',
+                msg: `Failed to get status update for session with id: ${externalSessionId}`,
                 data: error.response.data
             });
         });

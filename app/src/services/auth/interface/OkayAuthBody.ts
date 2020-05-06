@@ -7,3 +7,9 @@ export interface OkayAuthBody {
     authParams?: OkayAuthGuiParams
     signature: string;
 }
+
+export interface OkayCheckSessionBody {
+    tenantId: number;
+    sessionExternalId: number;
+    signature: string;
+}

@@ -1,8 +1,6 @@
 import { Request, Response, Router } from 'express';
 import { BAD_REQUEST, CREATED, OK } from 'http-status-codes';
 import { ParamsDictionary } from 'express-serve-static-core';
-
-import UserDao from '../data/repository/mock/User/User.mock';
 import {invalidUserIDQueryParameterError, paramMissingError} from '@shared/constants';
 import {UserRepositoryImpl} from "../data/repository/user/UserRepositoryImpl";
 

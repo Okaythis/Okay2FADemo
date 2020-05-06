@@ -1,8 +1,7 @@
 import logger from './Logger';
 import crypto from 'crypto'
 import {OkayAuthGuiParams} from "../services/auth/interface/OkayAuthGuiParams";
-import {OkayAuthBody} from "../services/auth/interface/OkayAuthBody";
-import {FileDbUtils} from "../data/db/filedb/FileDbUtils";
+import {OkayAuthBody, OkayCheckSessionBody} from "../services/auth/interface/OkayAuthBody";
 
 const {TENANT_ID, SECRET} = process.env;
 
@@ -36,6 +35,17 @@ export function prepareOkayRequestBody(userExternalId: string, type?: number, au
     } : <OkayAuthBody>{
         tenantId: Number(TENANT_ID),
         userExternalId,
+        signature
+    }
+}
+
+export function prepareOkayCheckSessionRequestBody(sessionExternalId: number): OkayCheckSessionBody {
+    const hashStr = `${TENANT_ID}${sessionExternalId}${SECRET}`;
+    const signature = createHashSignature(hashStr);
+
+    return <OkayCheckSessionBody>{
+        tenantId: Number(TENANT_ID),
+        sessionExternalId,
         signature
     }
 }
