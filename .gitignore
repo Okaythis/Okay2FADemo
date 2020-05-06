@@ -5,4 +5,4 @@ node_modules
 /.idea/libraries
 /.idea/vcs.xml
 
-./app/env/
+./app/env/development.env
