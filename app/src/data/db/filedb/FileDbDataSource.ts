@@ -3,10 +3,11 @@ import {IUser} from "../../entities/User";
 import jsonfile from "jsonfile";
 import {FileDbUtils} from "./FileDbUtils";
 import  Logger from "@shared/Logger";
+import {DbUtils} from "@shared/utils/DbUtils";
 
 export class FileDbDataSource extends BaseDataSource {
 
-    private readonly dbFilePath = 'src/data/db/filedb/MockDb.json';
+    private readonly dbFilePath =  `${__dirname}/MockDb.json`;
     private db: any;
 
     constructor() {
@@ -28,7 +29,8 @@ export class FileDbDataSource extends BaseDataSource {
     async add(user: IUser): Promise<IUser> {
         try {
             this.checkDatabase();
-            user.id = FileDbUtils.getRandomInt();
+            user.id = DbUtils.getRandomInt();
+            user.userExternalId = DbUtils.generateUserExternalId();
             this.db.users.push(user);
             await FileDbUtils.saveDb(this.dbFilePath, this.db);
             return Promise.resolve(user);

@@ -1,19 +1,28 @@
 {
   "users": [
     {
-      "name": "Sean Maxwell",
-      "email": "sean.maxwell@gmail.com",
+      "userExternalId": "906524522143-906524522143",
+      "name": "Barry Allen",
+      "email": "b.a@ba.com",
       "id": 159123164363
     },
     {
-      "name": "Gordan Freeman",
-      "email": "gordan.freeman@halflife.com",
+      "userExternalId": "906524522143-906524522143",
+      "name": "Albert Einstein",
+      "email": "a.e@ae.com",
       "id": 906524522143
     },
     {
-      "name": "John Smith",
-      "email": "jsmith@yahoo.com",
+      "userExternalId": "357437875835-357437875835",
+      "name": "A.M Turing",
+      "email": "am@turing.com",
       "id": 357437875835
+    },
+    {
+      "userExternalId": "357437828835-357437828835",
+      "name": "James Gosling",
+      "email": "jm@gosling.com",
+      "id": 357437828835
     }
   ]
 }

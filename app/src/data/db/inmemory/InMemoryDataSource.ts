@@ -1,8 +1,7 @@
 import {IUser} from "../../entities/User";
 import Loki from "lokijs";
-import {UserRepository} from "../../repository/user/UserRepository";
 import {BaseDataSource} from "../BaseDataSource";
-import {FileDbUtils} from "../filedb/FileDbUtils";
+import {DbUtils} from "@shared/utils/DbUtils";
 
 
 export class InMemoryDataSource extends BaseDataSource{
@@ -19,7 +18,9 @@ export class InMemoryDataSource extends BaseDataSource{
     }
 
     add(user: IUser): Promise<IUser> {
-       return this.userDoc.insert({id: FileDbUtils.getRandomInt(), name: user.name, email: user.email });
+        const {name, email } = user
+        const userExternalId = DbUtils.generateUserExternalId();
+       return this.userDoc.insert({id: DbUtils.getRandomInt(), name, email, userExternalId});
     }
 
     async remove(id: number): Promise<boolean> {
