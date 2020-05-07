@@ -1,4 +1,4 @@
-import {IUser} from "../../entities/User";
+import {IUser} from "../../models/User";
 import Loki from "lokijs";
 import {BaseDataSource} from "../BaseDataSource";
 import {DbUtils} from "@shared/utils/DbUtils";

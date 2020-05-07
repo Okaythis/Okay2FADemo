@@ -1,4 +1,4 @@
-import {IUser} from "../../entities/User";
+import {IUser} from "../../models/User";
 
 export interface UserRepository {
     getOne: (id: number) => Promise<IUser | null> | undefined;

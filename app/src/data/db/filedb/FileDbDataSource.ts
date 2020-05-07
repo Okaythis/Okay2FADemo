@@ -1,5 +1,5 @@
 import {BaseDataSource} from "../BaseDataSource";
-import {IUser} from "../../entities/User";
+import {IUser} from "../../models/User";
 import jsonfile from "jsonfile";
 import {FileDbUtils} from "./FileDbUtils";
 import  Logger from "@shared/Logger";

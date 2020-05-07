@@ -2,7 +2,7 @@ import { Request, Response, Router } from 'express';
 import { BAD_REQUEST, CREATED, OK } from 'http-status-codes';
 import { ParamsDictionary } from 'express-serve-static-core';
 import {invalidUserIDQueryParameterError, paramMissingError} from '@shared/constants';
-import {UserRepositoryImpl} from "../data/repository/user/UserRepositoryImpl";
+import {UserRepositoryImpl} from "../../data/repository/user/UserRepositoryImpl";
 
 // Init shared
 const router = Router();
@@ -25,7 +25,7 @@ router.get('/id/:id', async (req: Request, res: Response) => {
     return res.status(OK).json({user});
 });
 
-router.post('/add', async (req: Request, res: Response) => {
+router.post('/register', async (req: Request, res: Response) => {
     const { user } = req.body;
     if (!user) {
         return res.status(BAD_REQUEST).json({

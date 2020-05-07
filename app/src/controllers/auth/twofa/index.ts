@@ -3,7 +3,7 @@ import {
     invalidExternalUserIDQueryParameterError
 } from "@shared/constants";
 import {BAD_REQUEST, INTERNAL_SERVER_ERROR} from "http-status-codes";
-import {Okay2FAService} from "../../services/auth/Okay2FAService";
+import {Okay2FAService} from "../../../services/auth/Okay2FAService";
 
 const router = express.Router();
 const okay2FAService = new Okay2FAService();
