@@ -73,7 +73,7 @@ To be able to recieve feedbacks from Okay servers you will need to add a valid c
 
 After you have successfully created a tenant on Okay, we can now use our credentials to configure this server to make it work. 
 
-You have to locate the `/app/env/development.env` file on the project root folder. Then replace the `TENANT_ID` to your own tenant id and `SECRET` to your tenant secret like so.
+You have to locate the `/app/env/development.env` file in the project folder. Then replace the `TENANT_ID` with your own tenant id and `SECRET` with your tenant secret like so.
 ```js
 // development.env
 
