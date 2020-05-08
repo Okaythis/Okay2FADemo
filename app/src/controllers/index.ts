@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import UserRouter from './users';
-import AuthRouter from './auth/twofa/'
+import AuthRouter from './auth/'
 import DynamicLinkRouter from './link/'
 
 // Init router and path
