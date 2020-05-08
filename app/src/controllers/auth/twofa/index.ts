@@ -1,6 +1,6 @@
 import express from 'express';
 import {
-    invalidExternalUserIDQueryParameterError
+    INVALID_EXTERNAL_USER_ID_QUERY_PARAMETER_ERROR
 } from "@shared/constants";
 import {BAD_REQUEST, INTERNAL_SERVER_ERROR} from "http-status-codes";
 import {Okay2FAService} from "../../../services/auth/Okay2FAService";
@@ -14,7 +14,7 @@ router.post('/simple', (req, res) => {
         return res
             .status(BAD_REQUEST)
             .json({
-                error: invalidExternalUserIDQueryParameterError
+                error: INVALID_EXTERNAL_USER_ID_QUERY_PARAMETER_ERROR
             })
     }
     okay2FAService
@@ -36,7 +36,7 @@ router.post('/pin', (req, res) => {
         return res
             .status(BAD_REQUEST)
             .json({
-                error: invalidExternalUserIDQueryParameterError
+                error: INVALID_EXTERNAL_USER_ID_QUERY_PARAMETER_ERROR
             })
     }
     okay2FAService
@@ -59,7 +59,7 @@ router.post('/biometric', (req, res) => {
         return res
             .status(BAD_REQUEST)
             .json({
-                error: invalidExternalUserIDQueryParameterError
+                error: INVALID_EXTERNAL_USER_ID_QUERY_PARAMETER_ERROR
             })
     }
 
@@ -83,7 +83,7 @@ router.get('/status/:externalSessionId', (req, res) => {
         return res
             .status(BAD_REQUEST)
             .json({
-                error: invalidExternalUserIDQueryParameterError
+                error: INVALID_EXTERNAL_USER_ID_QUERY_PARAMETER_ERROR
             })
     }
 

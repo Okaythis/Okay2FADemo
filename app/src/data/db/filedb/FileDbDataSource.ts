@@ -50,7 +50,7 @@ export class FileDbDataSource extends BaseDataSource {
 
     }
 
-    getOne(id: number): Promise<IUser> {
+    getOneById(id: number): Promise<IUser> {
         try {
             this.checkDatabase();
             let user = this.db.users.find((user: IUser) => user.id === id );
@@ -61,7 +61,19 @@ export class FileDbDataSource extends BaseDataSource {
         } catch (e) {
             throw e;
         }
+    }
 
+    getOneByEmail(email: string): Promise<IUser> {
+        try {
+            this.checkDatabase();
+            let user = this.db.users.find((user: IUser) => user.email === email);
+            if (!user) {
+                return Promise.reject("User Does not exist");
+            }
+            return Promise.resolve(user);
+        } catch (e) {
+            throw e;
+        }
     }
 
     async remove(id: number): Promise<boolean> {

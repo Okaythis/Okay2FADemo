@@ -8,7 +8,7 @@ const router = Router();
 
 // Add sub-routes
 router.use('/2fa', TwoFARouter);
-router.use('/', UserSessionRouter);
+router.use('/user', UserSessionRouter);
 
 
 // Export the base-router

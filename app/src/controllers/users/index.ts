@@ -1,7 +1,7 @@
 import { Request, Response, Router } from 'express';
 import { BAD_REQUEST, CREATED, OK } from 'http-status-codes';
 import { ParamsDictionary } from 'express-serve-static-core';
-import {invalidUserIDQueryParameterError, paramMissingError} from '@shared/constants';
+import {INVALID_USER_ID_QUERY_PARAMETER_ERROR, PARAM_MISSING_ERROR} from '@shared/constants';
 import {UserRepositoryImpl} from "../../data/repository/user/UserRepositoryImpl";
 
 // Init shared
@@ -18,10 +18,10 @@ router.get('/id/:id', async (req: Request, res: Response) => {
     const {id} = req.params;
     if(!id) {
         return res.status(BAD_REQUEST).json({
-            error: invalidUserIDQueryParameterError,
+            error: INVALID_USER_ID_QUERY_PARAMETER_ERROR,
         });
     }
-    const user = await userRepo.getOne(Number(id));
+    const user = await userRepo.getOneById(Number(id));
     return res.status(OK).json({user});
 });
 
@@ -29,7 +29,7 @@ router.post('/register', async (req: Request, res: Response) => {
     const { user } = req.body;
     if (!user) {
         return res.status(BAD_REQUEST).json({
-            error: paramMissingError,
+            error: PARAM_MISSING_ERROR,
         });
     }
     await userRepo.add(user);
@@ -40,7 +40,7 @@ router.put('/update', async (req: Request, res: Response) => {
     const { user } = req.body;
     if (!user) {
         return res.status(BAD_REQUEST).json({
-            error: paramMissingError,
+            error: PARAM_MISSING_ERROR,
         });
     }
     user.id = Number(user.id);

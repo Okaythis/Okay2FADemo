@@ -23,12 +23,16 @@ export class UserRepositoryImpl implements UserRepository {
         return this.dataSource?.getAll();
     }
 
-    getOne(id: number): Promise<IUser | null> | undefined {
-        return this.dataSource?.getOne(id);
+    getOneById(id: number): Promise<IUser | null> | undefined {
+        return this.dataSource?.getOneById(id);
     }
 
     update(user: IUser): Promise<IUser> | undefined  {
         return this.dataSource?.update(user)
+    }
+
+    getOneByEmail(email: string): Promise<IUser | null> | undefined {
+        return this.dataSource?.getOneByEmail(email);
     }
 
 }

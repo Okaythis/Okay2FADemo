@@ -6,9 +6,11 @@ export abstract class BaseDataSource implements DataSource {
 
     abstract getAll(): Promise<IUser[]>;
 
-    abstract getOne(id: number): Promise<IUser>;
+    abstract getOneById(id: number): Promise<IUser>;
 
     abstract remove(id: number): Promise<boolean>;
 
     abstract update(user: IUser): Promise<IUser>;
+
+    abstract getOneByEmail(email: string): Promise<IUser>;
 }

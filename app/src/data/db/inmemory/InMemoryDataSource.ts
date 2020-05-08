@@ -32,8 +32,12 @@ export class InMemoryDataSource extends BaseDataSource{
         return this.userDoc.find({});
     }
 
-    getOne(id: number): Promise<IUser> {
+    getOneById(id: number): Promise<IUser> {
         return this.userDoc.findOne({id});
+    }
+
+    getOneByEmail(email: string): Promise<IUser> {
+        return this.userDoc.findOne({email});
     }
 
     update(user: IUser): Promise<IUser> {
