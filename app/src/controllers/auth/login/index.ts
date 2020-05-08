@@ -30,8 +30,7 @@ router.post('/login', async (req, res) => {
     }
 
     // user has been authenticated successfully
-    // we can now send 2fa request to mobile device
-    // then send second auth
+    // we can now send 2fa request to the mobile device
     okay2FAService
         .authorizeWithSimpleButtonClick(user.userExternalId)
         .then((response) => {
