@@ -1,4 +1,3 @@
-import {createHashSignature} from "@shared/functions";
 import axios from "axios";
 
 export class API {

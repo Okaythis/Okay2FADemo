@@ -29,7 +29,7 @@ Project Tools (Please install these tools)
 
  ![Dashboard Toolbar Image](/app/src/public/images/toolbar-tenants.png)
 
- The [**Tenants**](https://demostand.okaythis.com/multi-tenant-admin/tenants) web page is where you will register your server as a SPS that will communicate with Okay servers in order to verify/intiate secure transactions/authentications. Your tenant page should present a table that looks like the table below.
+ The [**Tenants**](https://demostand.okaythis.com/multi-tenant-admin/tenants) web page is where you will register your server as a Service Provider that will communicate with Okay servers in order to verify/intiate secure transactions/authentications. Your tenant page should present a table that looks like the table below.
 
  ![Tenant Table Image](/app/src/public/images/tenant-dashboard.png)
 
@@ -39,7 +39,7 @@ Project Tools (Please install these tools)
 
 ### Tenant ID
 
- The first column under the table is what we refer to as your **Tenant ID**. In the image above my **Tenant Id** is `40007`. It is very important that you take note of this value as we will be using this value for our transactions/authentication.
+ The first column under the table is what we refer to as your **Tenant ID**. In the image above my **Tenant Id** is `40007`. It is very important you take note of this value as we will be using this value for our transactions/authentication.
 
 ### Name
 
@@ -51,7 +51,7 @@ Project Tools (Please install these tools)
 
 ### Trial Expiration
 
- Shows your tenant trial expiration date, if you are still on trial mode.
+ Shows your tenant trial expiration date, if you are on trial mode.
 
 ### Actions
 
@@ -82,4 +82,4 @@ TENANT_ID =REPLACE_WITH_YOUR_TENANT_ID // change from 50001 to your tenant id
 SECRET =REPLACE_WITH_YOUR_TENANT_SECRET // change from secret to your tenant secret
 ```
 
-If you have setup the variables correctly please run `  yarn start:dev` from the root of this project on your terminal, shell or command line interface.
+If you have set up the variables correctly please run `  yarn start:dev` from the root of this project on your terminal, shell or command line interface.

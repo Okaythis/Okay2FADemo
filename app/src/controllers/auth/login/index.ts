@@ -1,5 +1,5 @@
 import express from 'express';
-import {INTERNAL_SERVER_ERROR, NOT_FOUND} from "http-status-codes";
+import {INTERNAL_SERVER_ERROR} from "http-status-codes";
 import {AuthServiceImpl} from "../../../services/auth/user/AuthServiceImpl";
 import {AuthService} from "../../../services/auth/user/AuthService";
 
