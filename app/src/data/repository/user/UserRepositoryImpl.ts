@@ -5,34 +5,34 @@ import {BaseDataSource} from "../../db/BaseDataSource";
 
 export class UserRepositoryImpl implements UserRepository {
 
-    private dataSource?: BaseDataSource;
+    private dataSource: BaseDataSource;
 
     constructor() {
         this.dataSource = new DataSourceAccessorImpl().getDataSource();
     }
 
-    add(user: IUser): Promise<IUser> | undefined {
-        return this.dataSource?.add(user);
+    add(user: IUser): Promise<IUser> {
+        return this.dataSource.add(user);
     }
 
-    remove(id: number): Promise<boolean> | undefined {
-        return this.dataSource?.remove(id);
+    remove(id: number): Promise<boolean> {
+        return this.dataSource.remove(id);
     }
 
-    getAll(): Promise<IUser[]> | undefined {
-        return this.dataSource?.getAll();
+    getAll(): Promise<IUser[]> {
+        return this.dataSource.getAll();
     }
 
-    getOneById(id: number): Promise<IUser | null> | undefined {
-        return this.dataSource?.getOneById(id);
+    getOneById(id: number): Promise<IUser> {
+        return this.dataSource.getOneById(id);
     }
 
-    update(user: IUser): Promise<IUser> | undefined  {
-        return this.dataSource?.update(user)
+    update(user: IUser): Promise<IUser>  {
+        return this.dataSource.update(user)
     }
 
-    getOneByEmail(email: string): Promise<IUser | null> | undefined {
-        return this.dataSource?.getOneByEmail(email);
+    getOneByEmail(email: string): Promise<IUser> {
+        return this.dataSource.getOneByEmail(email);
     }
 
 }

@@ -1,4 +1,4 @@
-import {TwoFAService} from "./interface/TwoFAService";
+import {TwoFAService} from "../interface/TwoFAService";
 import {OKAY_2FA_GUI_HEADER, OKAY_2FA_GUI_TEXT} from "@shared/constants";
 import {API} from "@shared/API";
 import {prepareOkayCheckSessionRequestBody, prepareOkayRequestBody} from "@shared/functions";
