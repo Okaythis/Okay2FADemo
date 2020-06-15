@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./app/",
+    "rootDir": "./",
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -14,16 +15,16 @@
     "moduleResolution": "node",
     "paths": {
       "@daos/*": [
-        "app/src/daos/*"
+        "src/daos/*"
       ],
       "@entities/*": [
-        "app/src/entities/*"
+        "src/entities/*"
       ],
       "@shared/*": [
-        "app/src/shared/*"
+        "src/shared/*"
       ],
       "@server": [
-        "app/src/Server"
+        "src/Server"
       ]
     },
     "types": [
