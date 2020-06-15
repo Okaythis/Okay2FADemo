@@ -6,3 +6,4 @@ node_modules
 /.idea/vcs.xml
 
 ./app/env/development.env
+/dist
