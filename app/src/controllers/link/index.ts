@@ -14,7 +14,7 @@ router.post('/:userExternalId', (req, res) => {
         })
         .catch((error) => {
             res.status(INTERNAL_SERVER_ERROR).json({
-                msg: 'Authorization was not unsuccessful',
+                msg: 'Linking was not successful',
                 data: error.response.data
             });
         });
