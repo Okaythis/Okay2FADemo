@@ -2,7 +2,7 @@ import { Request, Response, Router } from 'express';
 import { BAD_REQUEST, CREATED, OK } from 'http-status-codes';
 import { ParamsDictionary } from 'express-serve-static-core';
 import {INVALID_USER_ID_QUERY_PARAMETER_ERROR, PARAM_MISSING_ERROR} from '@shared/constants';
-import {UserServiceImpl} from "../../services/user/UserServiceImpl";
+import {UserServiceImpl} from '../../services/user/UserServiceImpl';
 
 // Init shared
 const router = Router();

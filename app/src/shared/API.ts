@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export class API {
     static fetch(url: string, data?: any,  option?: any): Promise<any> {

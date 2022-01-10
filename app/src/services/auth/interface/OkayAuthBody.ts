@@ -1,4 +1,4 @@
-import {OkayAuthGuiParams} from "./OkayAuthGuiParams";
+import {OkayAuthGuiParams} from './OkayAuthGuiParams';
 
 export interface OkayAuthBody {
     tenantId: number;

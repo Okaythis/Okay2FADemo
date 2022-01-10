@@ -1,9 +1,9 @@
-import {BaseDataSource} from "../BaseDataSource";
-import {IUser} from "../../models/User";
-import jsonfile from "jsonfile";
-import {FileDbUtils} from "./FileDbUtils";
-import  Logger from "@shared/Logger";
-import {DbUtils} from "@shared/utils/DbUtils";
+import {BaseDataSource} from '../BaseDataSource';
+import {IUser} from '../../models/User';
+import jsonfile from 'jsonfile';
+import {FileDbUtils} from './FileDbUtils';
+import  Logger from '@shared/Logger';
+import {DbUtils} from '@shared/utils/DbUtils';
 
 export class FileDbDataSource extends BaseDataSource {
 
@@ -22,7 +22,7 @@ export class FileDbDataSource extends BaseDataSource {
 
     checkDatabase() {
         if (!this.db) {
-            throw new Error("FileDb could not be initialized");
+            throw new Error('FileDb could not be initialized');
         }
     }
 
@@ -53,11 +53,11 @@ export class FileDbDataSource extends BaseDataSource {
     getOneById(id: number): Promise<IUser> {
         try {
             this.checkDatabase();
-            let user = this.db.users.find((user: IUser) => user.id === id );
-            if (!user) {
-                return Promise.reject("User Does not exist");
+            const result = this.db.users.find((user: IUser) => user.id === id );
+            if (!result) {
+                return Promise.reject('User Does not exist');
             }
-            return Promise.resolve(user);
+            return Promise.resolve(result);
         } catch (e) {
             throw e;
         }
@@ -66,11 +66,11 @@ export class FileDbDataSource extends BaseDataSource {
     getOneByEmail(email: string): Promise<IUser> {
         try {
             this.checkDatabase();
-            let user = this.db.users.find((user: IUser) => user.email === email);
-            if (!user) {
-                return Promise.reject("User Does not exist");
+            const result = this.db.users.find((user: IUser) => user.email === email);
+            if (!result) {
+                return Promise.reject('User Does not exist');
             }
-            return Promise.resolve(user);
+            return Promise.resolve(result);
         } catch (e) {
             throw e;
         }
@@ -88,7 +88,7 @@ export class FileDbDataSource extends BaseDataSource {
                     return Promise.resolve(true);
                 }
             }
-            return Promise.reject("User does not exist");
+            return Promise.reject('User does not exist');
         } catch (e) {
             throw e;
         }
@@ -105,7 +105,7 @@ export class FileDbDataSource extends BaseDataSource {
                     return Promise.resolve(this.db.users[i]);
                 }
             }
-            return Promise.reject("User does not exist");
+            return Promise.reject('User does not exist');
         } catch (e) {
             throw e;
         }

@@ -1,4 +1,4 @@
-import {IUser} from "../../data/models/User";
+import {IUser} from '../../data/models/User';
 
 export interface UserService {
     findAll() : Promise<IUser[]>

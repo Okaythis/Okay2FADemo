@@ -1,8 +1,8 @@
-import {AuthService} from "./AuthService";
-import {EMAIL_NOT_PRESENT_ERROR, USER_NOT_FOUND_ERROR} from "@shared/constants";
-import {UserRepository} from "../../../data/repository/user/UserRepository";
-import {UserRepositoryImpl} from "../../../data/repository/user/UserRepositoryImpl";
-import {Okay2FAService} from "../2fa/Okay2FAService";
+import {AuthService} from './AuthService';
+import {EMAIL_NOT_PRESENT_ERROR, USER_NOT_FOUND_ERROR} from '@shared/constants';
+import {UserRepository} from '../../../data/repository/user/UserRepository';
+import {UserRepositoryImpl} from '../../../data/repository/user/UserRepositoryImpl';
+import {Okay2FAService} from '../2fa/Okay2FAService';
 
 export class AuthServiceImpl implements AuthService {
 

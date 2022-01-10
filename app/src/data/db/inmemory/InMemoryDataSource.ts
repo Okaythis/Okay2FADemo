@@ -1,7 +1,7 @@
-import {IUser} from "../../models/User";
-import Loki from "lokijs";
-import {BaseDataSource} from "../BaseDataSource";
-import {DbUtils} from "@shared/utils/DbUtils";
+import {IUser} from '../../models/User';
+import Loki from 'lokijs';
+import {BaseDataSource} from '../BaseDataSource';
+import {DbUtils} from '@shared/utils/DbUtils';
 
 
 export class InMemoryDataSource extends BaseDataSource{
@@ -11,8 +11,8 @@ export class InMemoryDataSource extends BaseDataSource{
 
     constructor() {
         super();
-        let {DB_NAME: dbInUse} = process.env;
-        if (!dbInUse) throw new Error("Invalid DB name");
+        const {DB_NAME: dbInUse} = process.env;
+        if (!dbInUse) throw new Error('Invalid DB name');
         this.db = new Loki(dbInUse);
         this.userDoc = this.db.addCollection('users')
     }

@@ -1,7 +1,7 @@
-import {UserRepository} from "./UserRepository";
-import {IUser} from "../../models/User";
-import {DataSourceAccessorImpl} from "../../db/accessor/DataSourceAccessorImpl";
-import {BaseDataSource} from "../../db/BaseDataSource";
+import {UserRepository} from './UserRepository';
+import {IUser} from '../../models/User';
+import {DataSourceAccessorImpl} from '../../db/accessor/DataSourceAccessorImpl';
+import {BaseDataSource} from '../../db/BaseDataSource';
 
 export class UserRepositoryImpl implements UserRepository {
 

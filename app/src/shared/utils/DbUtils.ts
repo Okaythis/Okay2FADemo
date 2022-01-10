@@ -1,4 +1,4 @@
-import {getRandomInt} from "@shared/functions";
+import {getRandomInt} from '@shared/functions';
 
 export class DbUtils {
 

@@ -1,4 +1,4 @@
-import jsonfile from "jsonfile";
+import jsonfile from 'jsonfile';
 
 export class FileDbUtils {
     static saveDb(dbFilePath: string, db: any, ): Promise<any> {

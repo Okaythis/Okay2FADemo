@@ -1,6 +1,6 @@
 import express from 'express';
-import {Okay2FAService} from "../../services/auth/2fa/Okay2FAService";
-import {INTERNAL_SERVER_ERROR} from "http-status-codes";
+import {Okay2FAService} from '../../services/auth/2fa/Okay2FAService';
+import {INTERNAL_SERVER_ERROR} from 'http-status-codes';
 
 const router = express.Router();
 const okay2FAService = new Okay2FAService();

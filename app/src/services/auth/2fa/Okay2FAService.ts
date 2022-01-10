@@ -1,8 +1,8 @@
-import {TwoFAService} from "../interface/TwoFAService";
-import {OKAY_2FA_GUI_HEADER, OKAY_2FA_GUI_TEXT} from "@shared/constants";
-import {API} from "@shared/API";
-import {prepareOkayCheckSessionRequestBody, prepareOkayRequestBody} from "@shared/functions";
-import {OkayAuthTypes} from "./OkayAuthTypes";
+import {TwoFAService} from '../interface/TwoFAService';
+import {OKAY_2FA_GUI_HEADER, OKAY_2FA_GUI_TEXT} from '@shared/constants';
+import {API} from '@shared/API';
+import {prepareOkayCheckSessionRequestBody, prepareOkayRequestBody} from '@shared/functions';
+import {OkayAuthTypes} from './OkayAuthTypes';
 
 const { PSS_BASE_URL } = process.env;
 const authParams = {

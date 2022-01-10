@@ -1,7 +1,7 @@
-import {UserService} from "./UserService";
-import {UserRepositoryImpl} from "../../data/repository/user/UserRepositoryImpl";
-import {UserRepository} from "../../data/repository/user/UserRepository";
-import {IUser} from "../../data/models/User";
+import {UserService} from './UserService';
+import {UserRepositoryImpl} from '../../data/repository/user/UserRepositoryImpl';
+import {UserRepository} from '../../data/repository/user/UserRepository';
+import {IUser} from '../../data/models/User';
 
 export class UserServiceImpl implements UserService {
     private readonly userRepo: UserRepository = new UserRepositoryImpl();
